@@ -1,0 +1,199 @@
+/* Star rating */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("../images/TP-background.jpg");
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: "Open-Sans", sans-serif;
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+}
+
+.star-rating {
+	border: 0;
+	display: flex;
+	flex-direction: row-reverse;
+	font-size: 2em;
+	justify-content: auto;
+	text-align: center;
+	width: 5em;
+}
+
+.star-rating input {
+	display: none;
+}
+
+.star-rating label {
+	color: rgb(128, 128, 128);
+	cursor: pointer;
+}
+
+.star-rating :checked ~ label {
+	color: rgb(255, 212, 59);
+}
+
+.star-rating :hover ~ label {
+	color: rgb(250, 176, 5);
+}
+
+body {
+	background-color: rgb(50, 50, 50);
+} 
+
+/* Home */
+
+.imageDiv {
+    margin-top: 20px;
+    width: auto;
+    height: 500px;
+}
+
+a {
+	text-decoration: none;
+  }
+
+
+  .logo {
+	height:40px;
+  }
+
+  .navbar-brand {
+	font-family: sans-serif;
+	font-weight:bold;
+  }
+
+  .navbar {
+	border: 1px solid #ccc;
+  }
+
+  .airpnp {
+	font-weight:700;
+	font-family:sans-serif;
+	color:#FF5A5F;
+  }
+
+  .air-descrip {
+	letter-spacing: -0.8px;
+  }
+
+  .src-button {
+	background-color:#FF5A5F;
+  }
+
+  /* Sign-up */
+
+.signin-wrap{
+	min-height:670px;
+	min-width: 670px;
+	position:relative;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.signin-html{
+	position:absolute;
+	padding:90px 500px 150px 70px;
+	background:grey;
+}
+.signin-html .sign-in-htm,
+.signin-html .sign-up-htm{
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.signin-html .sign-in,
+.signin-html .sign-up,
+.signin-form .group .check{
+	display:none;
+}
+.signin-html .tab,
+.signin-form .group .label,
+.signin-form .group .button,
+.age .gender {
+	text-transform:uppercase;
+}
+.signin-html .tab,
+.age .gender{
+	font-size:22px;
+	border-bottom:2px solid transparent;
+}
+.signin-html .sign-in:checked + .tab,
+.signin-html .sign-up:checked + .tab{
+	color:#fff;
+	border-color:black;
+}
+.signin-form{
+	min-height:345px;
+	position:relative;
+}
+
+.signin-form .group .label,
+.signin-form .group .input,
+.signin-form .group .button 
+.age .gender{
+	color:black;
+	display:block;
+}
+.signin-form .group .input,
+.signin-form .group .button{
+	border:none;
+	border-radius:25px;
+	background:whitesmoke;
+}
+
+.signin-form .group .label .age .gender{
+	color:black;
+	font-size:15px;
+}
+.signin-form .group .button{
+	background:#1161ee;
+}
+.signin-form .group label .icon{
+	background:black;
+}
+.signin-form .group label .icon:before,
+.signin-form .group label .icon:after{
+	background:#fff;
+	position:absolute;
+}
+.signin-form .group label .icon:before{
+	transform:scale(0) rotate(0);
+}
+.signin-form .group label .icon:after{
+	transform:scale(0) rotate(0);
+}
+.signin-form .group .check:checked + label{
+	color:#fff;
+}
+
+.signin-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.signin-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.signin-html .sign-in:checked + .tab + .sign-up + .tab + .signin-form .sign-in-htm{
+	transform:rotate(0);
+}
+.signin-html .sign-up:checked + .tab + .signin-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.indexImg {
+	width: 200px;
+	height: 150px;
+}
+
+#navb {
+	width: 100%;
+}
