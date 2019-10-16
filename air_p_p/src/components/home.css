@@ -4,7 +4,6 @@
 }
 
 body {
-	background-image: url("../images/TP-background.jpg");
 	background-position: center;
 	background-size: cover;
 	display: flex;

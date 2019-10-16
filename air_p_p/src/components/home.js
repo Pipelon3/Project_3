@@ -1,7 +1,68 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 import './home.css';
 
-function Home() {
+export default function App() {
+    return (
+      <Router>
+        <div>
+          <nav>
+          <Switch>
+            <Route path="/signIn">
+              <SignIn />
+            </Route>
+            <Route path="/review">
+              <Review />
+            </Route>
+            <Route path="/malls">
+              <Malls />
+            </Route>
+            <Route path="/schools">
+              <Schools />
+            </Route>
+            <Route path="/Top10">
+              <Top10 />
+            </Route>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+          </Switch>
+          </nav>
+        </div>
+      </Router>
+    );
+  }
+  
+  function Home() {
+    return <h2>Home</h2>;
+  }
+
+  function SignIn() {
+    return <h2>Sign-in/Sign-up</h2>;
+  }
+  
+  function Review() {
+    return <h2>Review</h2>;
+  }
+  
+  function Malls() {
+    return <h2>Malls</h2>;
+  }
+
+  function Schools() {
+    return <h2>Schools</h2>;
+  }
+
+  function Top10() {
+    return <h2>Top 10</h2>;
+  }
+
+function HomePage() {
   return (
     <div>
       
@@ -61,5 +122,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
