@@ -75,7 +75,7 @@ function HomePage() {
               placeholder="Find the perfect potty"
             />
             <span class="input-group-btn"></span>
-            <button class="toilet-button" src="./images/toilet-paper.png" /><button type="submit">
+            <img class="toilet-button" src="images/toilet-paper.png" /><button type="submit">
               
             </button>
           </div>
