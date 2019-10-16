@@ -75,9 +75,8 @@ function HomePage() {
               placeholder="Find the perfect potty"
             />
             <span class="input-group-btn"></span>
-            <button class="btn btn-secondary btn-lg src-button" type="submit">
-              {" "}
-              Search{" "}
+            <img class="toilet-button" src="images/toilet-paper.png" /><button type="submit">
+              
             </button>
           </div>
         </div>
@@ -103,7 +102,7 @@ function HomePage() {
             <div class="col">
               <a href="top10.html" />
               <div class="Top">
-                <img class="indexImg" src="./images/top10.jpg" />
+                <img class="indexImg" src="./images/top10-900x400.jpg" />
                 <p> Top 10 </p>
               </div>
             </div>
