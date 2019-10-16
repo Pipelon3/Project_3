@@ -197,3 +197,21 @@ a {
 #navb {
 	width: 100%;
 }
+
+.toilet-button {
+  
+	width: 30%;
+	height: 30%;
+  }
+  
+  .toilet-button:hover {
+	transform: rotate(-5deg);
+	transform-origin: 90% 50%; 
+	transition-duration: 100ms;
+  }
+  
+  .toilet-button:active {
+	transform: rotate(-30deg);
+	transform-origin: 90% 50%;
+	transition-duration: 100ms;
+  }
