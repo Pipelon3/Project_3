@@ -4,6 +4,7 @@
 }
 
 body {
+    background-image: url("/air_p_p/public/images/TP-background.jpg");
 	background-position: center;
 	background-size: cover;
 	display: flex;

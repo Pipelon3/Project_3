@@ -96,21 +96,21 @@ function HomePage() {
             <div class="col">
               <a href="malls.html" />
               <div class="malls">
-                <img class="indexImg" src="./assets/images/mall.jpg" />
+                <img class="indexImg" src="./images/mall.jpg" />
                 <p> Malls </p>
               </div>
             </div>
             <div class="col">
               <a href="schools.html" />
               <div class="schools">
-                <img class="indexImg" src="./assets/images/school.jpg" />
+                <img class="indexImg" src="./images/school.jpg" />
                 <p> Schools</p>
               </div>
             </div>
             <div class="col">
               <a href="top10.html" />
               <div class="Top">
-                <img class="indexImg" src="./assets/images/top10.jpg" />
+                <img class="indexImg" src="./images/top10.jpg" />
                 <p> Top 10 </p>
               </div>
             </div>
