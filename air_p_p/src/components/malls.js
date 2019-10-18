@@ -140,3 +140,5 @@ function Malls() {
     </div>
   );
 }
+
+export default Malls;

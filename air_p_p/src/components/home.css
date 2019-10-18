@@ -3,7 +3,7 @@
 	box-sizing: border-box;
 }
 
-body {
+/* body {
     background-image: url("/air_p_p/public/images/TP-background.jpg");
 	background-position: center;
 	background-size: cover;
@@ -14,7 +14,7 @@ body {
 	min-height: 100vh;
 	font-family: "Open-Sans", sans-serif;
 	margin: 0;
-}
+} */
 
 h2 {
 	text-align: center;
