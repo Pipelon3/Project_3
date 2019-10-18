@@ -1,33 +1,57 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./home.css";
+import SignIn from './signIn'
+import Review from './review'
+import Malls from './malls'
+import Schools from './schools'
 
 export default function App() {
   return (
     <Router>
       <div>
         <nav>
-          <Switch>
-            <Route path="/signIn">
-              <SignIn />
-            </Route>
-            <Route path="/review">
-              <Review />
-            </Route>
-            <Route path="/malls">
-              <Malls />
-            </Route>
-            <Route path="/schools">
-              <Schools />
-            </Route>
-            <Route path="/Top10">
-              <Top10 />
-            </Route>
-            <Route exact path="/">
-              <HomePage />
-            </Route>
-          </Switch>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/signIn">Sign-In/Sign-Up</Link>
+            </li>
+            <li>
+              <Link to="/review">Review</Link>
+            </li>
+            <li>
+              <Link to="/malls">Malls</Link>
+            </li>
+            <li>
+              <Link to="/schools">Schools</Link>
+            </li>
+            <li>
+              <Link to="/top10">Top 10</Link>
+            </li>
+          </ul>
         </nav>
+        <Switch>
+          <Route path="/signIn">
+            <SignInRender />
+          </Route>
+          <Route path="/review">
+            <ReviewRender />
+          </Route>
+          <Route path="/malls">
+            <MallsRender />
+          </Route>
+          <Route path="/schools">
+            <Schools />
+          </Route>
+          <Route path="/Top10">
+            <Top10 />
+          </Route>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
@@ -37,20 +61,20 @@ function Home() {
   return <h2>Home</h2>;
 }
 
-function SignIn() {
-  return <h2>Sign-in/Sign-up</h2>;
+function SignInRender() {
+  return <SignIn />;
 }
 
-function Review() {
-  return <h2>Review</h2>;
+function ReviewRender() {
+  return <Review />;
 }
 
-function Malls() {
-  return <h2>Malls</h2>;
+function MallsRender() {
+  return <Malls />;
 }
 
-function Schools() {
-  return <h2>Schools</h2>;
+function SchoolsRender() {
+  return <Schools />;
 }
 
 function Top10() {

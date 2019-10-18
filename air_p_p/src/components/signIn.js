@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css";
 
-function signIn() {
+function SignIn() {
   return (
     <div>
       <br></br>
@@ -104,3 +104,5 @@ function signIn() {
     </div>
   );
 }
+
+export default SignIn;
