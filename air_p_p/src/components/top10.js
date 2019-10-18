@@ -7,8 +7,3 @@ import {
   } from "react-router-dom";
 import './home.css';
 
-function Top10() {
-  return (
-    );
-  }
-  
