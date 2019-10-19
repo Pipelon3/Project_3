@@ -5,22 +5,6 @@ import ReactDOM from 'react-dom';
 import StarRatingComponent from 'react-star-rating-component';
 
 function Review() {
-<<<<<<< HEAD
-    return (
-<div class="card">
-  <h5 class="card-header">Submit a Review</h5>
-  <div class="card-body" />
-  <form>
-    <div class="form-group">
-      User
-      <input
-        type="user"
-        class="form-control"
-        id="userInfo"
-        placeholder="John Doe"
-      />
-    </div>
-=======
   return (
     <div class="card">
       <h5 class="card-header">Submit a Review</h5>
@@ -35,7 +19,6 @@ function Review() {
             placeholder="Danny Devito"
           />
         </div>
->>>>>>> 498418bb2099802c67157d2a46d18f3e9c7ef2cf
 
         <div class="form-group">
           <label for="inputLocation">Location</label>

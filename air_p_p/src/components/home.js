@@ -5,6 +5,7 @@ import SignIn from './signIn'
 import Review from './review'
 import Malls from './malls'
 import Schools from './schools'
+import PottyMap from './pottymap'
 
 export default function App() {
   return (
@@ -103,6 +104,7 @@ function HomePage() {
             <span class="input-group-btn"></span>
             <img class="toilet-button" src="images/toilet-paper.png" />
           </div>
+          <PottyMap/>
         </div>
       </div>
 

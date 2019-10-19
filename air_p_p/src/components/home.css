@@ -1,16 +1,9 @@
 /* Star rating */
 * {
 	box-sizing: border-box;
-<<<<<<< HEAD
-}
-
- body {
-    background-image: url("/air_p_p/public/images/TP-background.jpg");
-=======
 }	
  body {
     background-image: url("");
->>>>>>> 498418bb2099802c67157d2a46d18f3e9c7ef2cf
 	background-position: center;
 	background-size: cover;
 	display: flex;
@@ -20,12 +13,7 @@
 	min-height: 100vh;
 	font-family: "Open-Sans", sans-serif;
 	margin: 0;
-<<<<<<< HEAD
-} 
-
-=======
 }
->>>>>>> 498418bb2099802c67157d2a46d18f3e9c7ef2cf
 h2 {
 	text-align: center;
 }
