@@ -9,12 +9,12 @@ function Review() {
   <div class="card-body" />
   <form>
     <div class="form-group">
-      User>
+      User
       <input
         type="user"
         class="form-control"
         id="userInfo"
-        placeholder="Danny Devito"
+        placeholder="John Doe"
       />
     </div>
 
