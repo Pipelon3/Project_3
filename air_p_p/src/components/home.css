@@ -17,6 +17,13 @@
 h2 {
 	text-align: center;
 }
+.jumbotron {
+	background-image: linear-gradient(rgb(187, 221, 156), rgb(71, 255, 184));
+	/* background-color: rgb(199, 245, 188); */
+}
+.navb {
+	background-color: rgb(199, 245, 188);
+}
 
 .star-rating {
 	border: 0;
