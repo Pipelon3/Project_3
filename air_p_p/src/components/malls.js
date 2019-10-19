@@ -19,8 +19,8 @@ function Malls() {
               <h5 class="card-title">Fashion Place</h5>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Location:Murry</li>
-              <li class="list-group-item">Number of Bathroom: 3</li>
+              <li class="list-group-item">Location: Murray</li>
+              <li class="list-group-item">Number of Bathrooms: 6</li>
               <li class="list-group-item">Overall Rating</li>
             </ul>
             <div class="card-body">
@@ -39,8 +39,8 @@ function Malls() {
               <h5 class="card-title">South Town</h5>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Location:Sandy</li>
-              <li class="list-group-item">Number of Bathroom: 3</li>
+              <li class="list-group-item">Location: Sandy</li>
+              <li class="list-group-item">Number of Bathrooms: 10</li>
               <li class="list-group-item">Overall Rating</li>
               <div class="star-rating">
                 <input type="radio" id="5-stars" name="rating" value="5" />
@@ -81,8 +81,8 @@ function Malls() {
               <h5 class="card-title">City Creek</h5>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Location:SLC</li>
-              <li class="list-group-item">Number of Bathroom: 3</li>
+              <li class="list-group-item">Location: Salt Lake City</li>
+              <li class="list-group-item">Number of Bathrooms: 7</li>
               <li class="list-group-item">Overall Rating</li>
               <div class="star-rating">
                 <input type="radio" id="5-stars" name="rating" value="5" />
