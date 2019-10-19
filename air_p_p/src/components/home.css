@@ -20,6 +20,11 @@ h2 {
 .jumbotron {
 	background-image: linear-gradient(rgb(187, 221, 156), rgb(71, 255, 184));
 	/* background-color: rgb(199, 245, 188); */
+	font-family: 'Alfa Slab One', cursive;
+}
+.card{
+
+	font-family: 'Vidaloka', serif;
 }
 .navb {
 	background-color: rgb(199, 245, 188);
