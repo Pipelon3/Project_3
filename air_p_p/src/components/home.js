@@ -32,6 +32,7 @@ export default function App() {
             </li>
           </ul>
         </nav>
+        <nav>
         <Switch>
           <Route path="/signIn">
             <SignInRender />
@@ -52,6 +53,7 @@ export default function App() {
             <HomePage />
           </Route>
         </Switch>
+      </nav>
       </div>
     </Router>
   );
@@ -99,9 +101,7 @@ function HomePage() {
               placeholder="Find the perfect potty"
             />
             <span class="input-group-btn"></span>
-            <img class="toilet-button" src="images/toilet-paper.png" /><button type="submit">
-              
-            </button>
+            <img class="toilet-button" src="images/toilet-paper.png" />
           </div>
         </div>
       </div>
