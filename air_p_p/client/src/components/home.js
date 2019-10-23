@@ -19,9 +19,7 @@ export default function Home() {
               placeholder="Find the perfect potty"
             />
             <span class="input-group-btn"></span>
-            <img class="toilet-button" src="images/toilet-paper.png" /><button type="submit">
-              
-            </button>
+            <img class="toilet-button" src="images/toilet-paper.png" />
           </div>
         </div>
       </div>
