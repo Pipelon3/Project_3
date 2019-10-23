@@ -1,7 +1,9 @@
-import React, {Component}from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./home.css";
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
 
 function Review() {
   return (
@@ -18,7 +20,6 @@ function Review() {
             placeholder="Danny Devito"
           />
         </div>
-
         <div class="form-group">
           <label for="inputLocation">Location</label>
           <input
@@ -28,7 +29,6 @@ function Review() {
             placeholder="Nordstrom 2nd floor"
           />
         </div>
-
         <div class="form-group">
           <label for="Cleanliness review">Cleanliness Review</label>
           <select class="form-control" id="Cleanliness">
@@ -89,5 +89,19 @@ function Review() {
     </div>
   );
 }
+render() {
+  return (<Rater total={5} rating={2} />)
+}
+// var NewComponent = React.createClass({
+//   render: function() {
+//     return (
+//       <div>
+//         <label htmlFor="input-4" className="control-label">Rate This</label>
+//         <input id="input-4" name="input-4" className="rating rating-loading" data-show-clear="false" data-show-caption="true" />
+//       </div>
+//     );
+//   }
+// });
 
 export default Review;
+

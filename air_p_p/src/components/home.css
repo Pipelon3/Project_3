@@ -25,8 +25,12 @@ h1 {
 	/* background-color: rgb(199, 245, 188); */
 	font-family: 'Alfa Slab One', cursive;
 }
+.signin-wrap {
+	background-image: linear-gradient(rgb(171, 205, 224), rgb(71, 255, 184));
+}
 .card{
-	color: linear-gradient(rgb(187, 221, 156), rgb(71, 255, 184));
+	color: black;
+	background-image: linear-gradient(rgb(171, 205, 224), rgb(71, 255, 184));
 	font-family: 'Vidaloka', serif;
 }
 .navb {
