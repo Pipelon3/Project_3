@@ -3,27 +3,26 @@
 	box-sizing: border-box;
 }	
  body {
-    background-image: url("");
-	background-position: center;
-	background-size: cover;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	min-height: 100vh;
-	font-family: "Open-Sans", sans-serif;
-	margin: 0;
+    background-image: url('');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: "Open-Sans", sans-serif;
+    margin: 0;
 }
 h2 {
 	text-align: center;
 }
+h1 {
+	text-align: center;
+}
 .jumbotron {
-	background-image: linear-gradient(rgb(187, 221, 156), rgb(71, 255, 184));
+	background-image: linear-gradient(rgb(171, 205, 224), rgb(71, 255, 184));
 	/* background-color: rgb(199, 245, 188); */
 	font-family: 'Alfa Slab One', cursive;
 }
 .card{
-
+	color: linear-gradient(rgb(187, 221, 156), rgb(71, 255, 184));
 	font-family: 'Vidaloka', serif;
 }
 .navb {
