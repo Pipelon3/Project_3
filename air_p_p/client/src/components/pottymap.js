@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./home.css";
+import "./home.css
+
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
 
 const Listing = ({ places }) =>
@@ -106,6 +107,3 @@ class PottyMap extends React.Component {
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: process.env.REACT_APP_AirPnP_API_KEY
-})(PottyMap);
