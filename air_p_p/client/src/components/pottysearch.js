@@ -23,16 +23,16 @@ class PottySearch extends React.Component {
 
   render() {
     return (
-      <div class="input-group">
+      <div className="input-group">
         {/*<form onSubmit={this.handleSubmit}>*/}
         <input value={this.state.value} onChange={this.handleChange}
-          class="form-control"
+          className="form-control"
           type="text"
           placeholder="Find the perfect potty"
         />
         {/*</form>*/}
-        <span class="input-group-btn"></span>
-        <img class="toilet-button" src="images/toilet-paper.png" onClick={() => this.props.onSearch(this.state.value)}/>
+        <span className="input-group-btn"></span>
+        <img className="toilet-button" src="images/toilet-paper.png" onClick={() => this.props.onSearch(this.state.value)}/>
       </div>
     );
   }
