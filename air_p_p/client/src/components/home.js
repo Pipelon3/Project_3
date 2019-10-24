@@ -1,58 +1,64 @@
 import React from "react";
 import "./home.css";
+import PottyMap from "./pottymap"
+import PottySearch from "./pottysearch"
 
-export default function Home() {
-  return (
-    <div>
-      <br></br>
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
 
-      <div class="jumbotron">
-        <div class="container">
-          <h3 class="display-4 airbnb"> AirPnP </h3>
-          <br></br>
-          <h3 class="display-4 air-descrip">Locate a restroom near you.</h3>
-          <br></br>
-          <div class="input-group">
-            <input
-              class="form-control"
-              type="text"
-              placeholder="Find the perfect potty"
-            />
-            <span class="input-group-btn"></span>
-            <img class="toilet-button" src="images/toilet-paper.png" />
+    this.state = {
+      userSearch: "10011 Centennial Parkway"
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <br></br>
+
+        <div className="jumbotron">
+          <div className="container">
+            <h3 className="display-4 airbnb"> AirPnP </h3>
+            <br></br>
+            <h3 className="display-4 air-descrip">Locate a restroom near you.</h3>
+            <br></br>
+            <PottyMap userSearch={this.state.userSearch} />
           </div>
         </div>
-      </div>
 
-      <div class="jumbotron">
-        <div class="container slider">
-          <div class="row">
-            <div class="col">
-              <a href="malls.html" />
-              <div class="malls">
-                <img class="indexImg" src="./images/mall.jpg" />
-                <p> Malls </p>
+        <div className="jumbotron">
+          <div className="container slider">
+            <div className="row">
+              <div className="col">
+                <a href="malls.html" />
+                <div className="malls">
+                  <img className="indexImg" src="./images/mall.jpg" />
+                  <p> Malls </p>
+                </div>
               </div>
-            </div>
-            <div class="col">
-              <a href="schools.html" />
-              <div class="schools">
-                <img class="indexImg" src="./images/school.jpg" />
-                <p> Schools</p>
+              <div className="col">
+                <a href="schools.html" />
+                <div className="schools">
+                  <img className="indexImg" src="./images/school.jpg" />
+                  <p> Schools</p>
+                </div>
               </div>
-            </div>
-            <div class="col">
-              <a href="top10.html" />
-              <div class="Top">
-                <img class="indexImg" src="./images/top10-900x400.jpg" />
-                <p> Top 10 </p>
+              <div className="col">
+                <a href="top10.html" />
+                <div className="Top">
+                  <img className="indexImg" src="./images/top10-900x400.jpg" />
+                  <p> Top 10 </p>
+                </div>
               </div>
             </div>
           </div>
+          <br></br>
+          <br></br>
         </div>
-        <br></br>
-        <br></br>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+export default Home;

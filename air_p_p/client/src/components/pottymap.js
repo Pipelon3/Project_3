@@ -1,109 +1,110 @@
+/* eslint-disable no-undef */
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./home.css
+import "./home.css";
+import {
+  withScriptjs,
+  withGoogleMap,
+  Marker,
+  GoogleMap
+} from "react-google-maps";
+import { compose, withProps, lifecycle } from "recompose";
+const _ = require("lodash");
+const { SearchBox } = require("react-google-maps/lib/components/places/SearchBox");
+       
 
-import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+const PottyMap = compose(
+  withProps({
+    googleMapURL:
+      "https://maps.googleapis.com/maps/api/js?key=" +
+      process.env.REACT_APP_AirPnP_API_KEY +
+      "&v=3.exp&libraries=geometry,drawing,places",
+    loadingElement: <div style={{ height: "100%" }} />,
+    containerElement: <div style={{ height: "400px" }} />,
+    mapElement: <div style={{ height: "100%" }} />
+  }),
+  lifecycle({
+    componentWillMount() {
+      const refs = {}
+      this.setState({
+        bounds: null,
+        center: {
+          lat: 41.9, lng: -87.624
+        },
+        markers: [],
+        onMapMounted: ref => {
+          refs.map = ref;
+        },
+        onBoundsChanged: () => {
+          this.setState({
+            bounds: refs.map.getBounds(),
+            center: refs.map.getCenter(),
+          })
+        },
+        onSearchBoxMounted: ref => {
+          refs.searchBox = ref;
+        },
+        onPlacesChanged: () => {
+          const places = refs.searchBox.getPlaces();
+          const bounds = new google.maps.LatLngBounds();
+          places.forEach(place => {
+            if (place.geometry.viewport) {
+              bounds.union(place.geometry.viewport)
+            } else {
+              bounds.extend(place.geometry.location)
+            }
+          });
+          const nextMarkers = places.map(place => ({
+            position: place.geometry.location,
+          }));
+          const nextCenter = _.get(nextMarkers, '0.position', this.state.center);
 
-const Listing = ({ places }) =>
-  places &&
-  places.map(p => (
-    <Marker
-      key={p.id}
-      name={p.name}
-      position={{
-        lat: p.geometry.location.lat(),
-        lng: p.geometry.location.lng()
-      }}
-    />
-  ));
-
-class PottyMap extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state.position = null;
-  }
-
-  state = {
-    places: []
-  };
-
-  onMapReady = (mapProps, map) => this.searchNearby(map, map.center);
-
-  searchNearby = (map, center) => {
-    const { google } = this.props;
-
-    const service = new google.maps.places.PlacesService(map);
-
-    // Specify location, radius and place types for your Places API search.
-    const request = {
-      location: center,
-      radius: "500",
-      type: ["restroom"]
-    };
-
-    service.nearbySearch(request, (results, status) => {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        this.setState({ places: results });
-      }
-    });
-  };
-
-  /*searchAddress = (map, center) => {
-    const { google } = this.props;
-
-    const service = new google.maps.places.PlacesService(map);
-
-    // Specify location, radius and place types for your Places API search.
-    const request = {
-      location: center,
-      radius: "500",
-      type: ["food"]
-    };
-
-    service.nearbySearch(request, (results, status) => {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        this.setState({ places: results });
-      }
-    });
-  };*/
-
-  render() {
-    return (
-      <div
+          this.setState({
+            center: nextCenter,
+            markers: nextMarkers,
+          });
+          // refs.map.fitBounds(bounds);
+        },
+      })
+    },
+  }),
+  withScriptjs,
+  withGoogleMap
+)(props => (
+  <GoogleMap
+    defaultZoom={8}
+    defaultCenter={{ lat: 40.5693337, lng: -111.8965424 }}
+  >
+   <SearchBox
+      ref={props.onSearchBoxMounted}
+      bounds={props.bounds}
+      controlPosition={google.maps.ControlPosition.TOP_LEFT}
+      onPlacesChanged={props.onPlacesChanged}
+    >
+      <input
+        type="text"
+        placeholder="Find the perfect potty"
         style={{
-          width: "75%",
-          marginLeft: 0,
-          height: "350px"
+          boxSizing: `border-box`,
+          border: `1px solid transparent`,
+          width: `600px`,
+          height: `32px`,
+          marginTop: `27px`,
+          padding: `0 12px`,
+          borderRadius: `3px`,
+          boxShadow: `0 2px 6px rgba(0, 0, 0, 0.3)`,
+          fontSize: `16px`,
+          outline: `none`,
+          textOverflow: `ellipses`,
+          background: `white url(images/toilet-paper.png) no-repeat`,
+          backgroundPosition: `right`,
+          backgroundSize: `contain`
         }}
-      >
-          <h3>{this.props.userSearch}</h3>
-        <Map
-          google={this.props.google}
-          zoom={8}
-          //initialCenter={{ lat: 47.444, lng: -122.176 }}
-          //center={searchAddress(this.props.userSearch)}
-          onReady={this.onMapReady}
-          containerStyle={{
-            height: "100%",
-            position: "relative",
-            width: "100%"
-          }}
-        >
-          {this.state.places &&
-            this.state.places.map(p => (
-              <Marker
-                key={p.id}
-                name={p.name}
-                position={{
-                  lat: p.geometry.location.lat(),
-                  lng: p.geometry.location.lng()
-                }}
-              />
-            ))}
-        </Map>
-      </div>
-    );
-  }
-}
+      />
+    </SearchBox>
+    {props.markers.map((marker, index) =>
+      <Marker key={index} position={marker.position} />
+    )}
+  </GoogleMap>
+));
 
+export default PottyMap;

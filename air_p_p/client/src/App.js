@@ -7,12 +7,10 @@ import Malls from './components/malls'
 import Bathroom from './components/bathroom'
 import Schools from './components/schools'
 
-console.log(process.env.REACT_APP_AirPnP_API_KEY)
-
 function App() {
   return (
     <Router>
-      <nav id="navb" class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav id="navb" className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="index.html">
           <img
             src="./assets/images/TP-icon.png"
@@ -22,7 +20,7 @@ function App() {
           />
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -30,27 +28,27 @@ function App() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
               <Link to="/">Home</Link>
             </li>
-            <li class="nav-item" class="nav-link">
+            <li className="nav-item" className="nav-link">
               <Link to="/signIn">Sign-In/Sign-Up</Link>
             </li>
-            <li class="nav-item" class="nav-link">
+            <li className="nav-item" className="nav-link">
               <Link to="/malls">Malls</Link>
             </li>
-            <li class="nav-item" class="nav-link">
+            <li className="nav-item" className="nav-link">
               <Link to="/schools">Schools</Link>
             </li>
-            <li class="nav-item" class="nav-link">
+            <li className="nav-item" className="nav-link">
               <Link to="/review">Review</Link>
             </li>
-            <li class="nav-item" class="nav-link">
+            <li className="nav-item" className="nav-link">
               <Link to="/top10">Top 10</Link>
             </li>
           </ul>
