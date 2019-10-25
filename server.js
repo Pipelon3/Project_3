@@ -1,7 +1,7 @@
 const express = require("express");
 // Handles environment variables
 require("dotenv").config();
-console.log(process.env.REACT_APP_AirPnP_API_KEY);
+
 
 // var mongojs = require("mongojs");
 const mongoose = require("mongoose");
