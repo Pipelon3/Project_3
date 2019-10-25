@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css";
-import PottyMap from "./pottymap"
-import PottySearch from "./pottysearch"
+import PottyMap from "./pottymap";
+import PottySearch from "./pottysearch";
 
 class Home extends React.Component {
   constructor(props) {
@@ -21,7 +21,9 @@ class Home extends React.Component {
           <div className="container">
             <h3 className="display-4 airbnb"> AirPnP </h3>
             <br></br>
-            <h3 className="display-4 air-descrip">Locate a restroom near you.</h3>
+            <h3 className="display-4 air-descrip">
+              Locate a restroom near you.
+            </h3>
             <br></br>
             <PottyMap userSearch={this.state.userSearch} />
           </div>
