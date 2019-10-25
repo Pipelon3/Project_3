@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.jumbotron {
+  margin-left: 1.5in;
+  margin-right: 1.5in;
+ }
+ p {
+  font-size: 30px;
+ }
+ .card {
+  margin-top: 1in;
+  margin-left: 2.5in;
+  margin-right: 2.5in;
+ }

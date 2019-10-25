@@ -11,6 +11,7 @@ import { compose, withProps, lifecycle } from "recompose";
 const _ = require("lodash");
 const { SearchBox } = require("react-google-maps/lib/components/places/SearchBox");
        
+console.log(process.env.REACT_APP_AirPnP_API_KEY);
 
 const PottyMap = compose(
   withProps({
