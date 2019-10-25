@@ -15,6 +15,10 @@ code {
   margin-left: 1.5in;
   margin-right: 1.5in;
 }
+.jumbotron jumbotron-fluid {
+  margin-left: 1.5in;
+  margin-right: 1.5in;
+}
 .indexImg{
   background-size: 6in;
 }
