@@ -1,7 +1,5 @@
 # dependencies
-**/node_modules
-/config/config.json
-/config/keys.js
+/node_modules
 /.pnp
 .pnp.js
 .env
