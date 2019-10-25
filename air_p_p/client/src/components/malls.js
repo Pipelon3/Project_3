@@ -16,6 +16,8 @@ class Malls extends Component {
   }
 
   componentDidMount() {
+    console.log("Component Mounted");
+
     fetch("/api/locations", {
       method: "GET", // or 'PUT'
       headers: {
@@ -31,22 +33,21 @@ class Malls extends Component {
       })
       .then(data => {
         console.log("database", data);
+        let locationsClone = this.state.locations;
         for (let i = 0; i < data.length; i++) {
           let datarow = data[i];
           if (datarow.location_type === "mall") {
-            let locationsClone = this.state.locations;
             locationsClone.push(datarow);
-            this.setState({
-              locations: locationsClone
-            });
           }
         }
+        console.log("set state");
+        this.setState({
+          locations: locationsClone
+        });
       });
   }
 
-  handleVisit(input) {
-    
-  }
+  handleVisit(input) {}
 
   render() {
     return (
@@ -67,9 +68,7 @@ class Malls extends Component {
                     Overall Rating: {location.overall_rating}
                   </li>
                 </ul>
-                <Link to={`/malls/${location.building_name}`}>
-                  Visit
-                </Link>
+                <Link to={`/malls/${location.building_name}`}>Visit</Link>
               </div>
             );
           })}

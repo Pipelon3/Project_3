@@ -9,8 +9,11 @@ import {
 } from "react-google-maps";
 import { compose, withProps, lifecycle } from "recompose";
 const _ = require("lodash");
-const { SearchBox } = require("react-google-maps/lib/components/places/SearchBox");
-       
+
+const {
+  SearchBox
+} = require("react-google-maps/lib/components/places/SearchBox");
+
 console.log(process.env.REACT_APP_AirPnP_API_KEY);
 
 const PottyMap = compose(
@@ -25,11 +28,12 @@ const PottyMap = compose(
   }),
   lifecycle({
     componentWillMount() {
-      const refs = {}
+      const refs = {};
       this.setState({
         bounds: null,
         center: {
-          lat: 41.9, lng: -87.624
+          lat: 41.9,
+          lng: -87.624
         },
         markers: [],
         onMapMounted: ref => {
@@ -38,8 +42,8 @@ const PottyMap = compose(
         onBoundsChanged: () => {
           this.setState({
             bounds: refs.map.getBounds(),
-            center: refs.map.getCenter(),
-          })
+            center: refs.map.getCenter()
+          });
         },
         onSearchBoxMounted: ref => {
           refs.searchBox = ref;
@@ -49,24 +53,28 @@ const PottyMap = compose(
           const bounds = new google.maps.LatLngBounds();
           places.forEach(place => {
             if (place.geometry.viewport) {
-              bounds.union(place.geometry.viewport)
+              bounds.union(place.geometry.viewport);
             } else {
-              bounds.extend(place.geometry.location)
+              bounds.extend(place.geometry.location);
             }
           });
           const nextMarkers = places.map(place => ({
-            position: place.geometry.location,
+            position: place.geometry.location
           }));
-          const nextCenter = _.get(nextMarkers, '0.position', this.state.center);
+          const nextCenter = _.get(
+            nextMarkers,
+            "0.position",
+            this.state.center
+          );
 
           this.setState({
             center: nextCenter,
-            markers: nextMarkers,
+            markers: nextMarkers
           });
           // refs.map.fitBounds(bounds);
-        },
-      })
-    },
+        }
+      });
+    }
   }),
   withScriptjs,
   withGoogleMap
@@ -75,7 +83,7 @@ const PottyMap = compose(
     defaultZoom={8}
     defaultCenter={{ lat: 40.5693337, lng: -111.8965424 }}
   >
-   <SearchBox
+    <SearchBox
       ref={props.onSearchBoxMounted}
       bounds={props.bounds}
       controlPosition={google.maps.ControlPosition.TOP_LEFT}
@@ -102,9 +110,9 @@ const PottyMap = compose(
         }}
       />
     </SearchBox>
-    {props.markers.map((marker, index) =>
+    {props.markers.map((marker, index) => (
       <Marker key={index} position={marker.position} />
-    )}
+    ))}
   </GoogleMap>
 ));
 

@@ -1,4 +1,7 @@
 const express = require("express");
+// Handles environment variables
+require("dotenv").config();
+console.log(process.env.REACT_APP_AirPnP_API_KEY);
 
 // var mongojs = require("mongojs");
 const mongoose = require("mongoose");
@@ -7,7 +10,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Locations', {useNewUrlParser: true});
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost:27017/Locations",
+  { useNewUrlParser: true }
+);
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -22,7 +28,6 @@ app.use(express.static("public"));
 // db.on("error", function(error) {
 //   console.log("Database Error:", error);
 // });
-
 
 // app.get("/all", function(req, res) {
 //   db.locations.find({}, function(error, found) {
