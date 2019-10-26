@@ -16,10 +16,22 @@ h2 {
 h1 {
 	text-align: center;
 }
+h5 {
+	text-align: center;
+}
 .jumbotron {
 	background-image: linear-gradient(rgb(171, 205, 224), rgb(71, 255, 184));
 	/* background-color: rgb(199, 245, 188); */
 	font-family: 'Alfa Slab One', cursive;
+}
+form {
+	background-color: rgb(255, 255, 255);
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+a {
+	font-family: 'Lora', serif;
 }
 .card{
 	color: linear-gradient(rgb(187, 221, 156), rgb(71, 255, 184));
