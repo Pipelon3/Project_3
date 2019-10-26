@@ -10,11 +10,11 @@ class Review extends React.Component {
   }
   mySubmitHandler = event => {
     event.preventDefault();
-    alert("You are submitting ");
+    alert("Thank you for submitting ");
     window.location.reload();
   };
   alert = event => {
-    alert("You are submitting ");
+    alert("Thank you for submitting ");
   };
   render() {
     return (
