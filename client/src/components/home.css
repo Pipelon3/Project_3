@@ -108,11 +108,14 @@ a {
 	min-width: 670px;
 	position:relative;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	background:grey;
+	width: 75%;
+	margin: auto;
 }
 .signin-html{
 	position:absolute;
 	padding:90px 500px 150px 70px;
-	background:grey;
+	margin: auto;
 }
 .signin-html .sign-in-htm,
 .signin-html .sign-up-htm{
@@ -200,8 +203,8 @@ a {
 }
 
 .indexImg {
-	width: 200px;
-	height: 150px;
+	width: 300px;
+	height: 250px;
 }
 
 #navb {

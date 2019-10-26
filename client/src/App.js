@@ -11,14 +11,8 @@ function App() {
   return (
     <Router>
       <nav id="navb" className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="index.html">
-          <img
-            src="./assets/images/TP-icon.png"
-            width="30"
-            height="30"
-            alt=""
-          />
-        </a>
+        {/* <a className="navbar-brand" href="index.html">
+        </a> */}
         <button
           className="navbar-toggler"
           type="button"
@@ -33,7 +27,7 @@ function App() {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
+            <li className="nav-item"  className="nav-link">
               <Link to="/">Home</Link>
             </li>
             <li className="nav-item" className="nav-link">
